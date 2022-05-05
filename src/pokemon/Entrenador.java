@@ -1,68 +1,47 @@
-public class Clase_entrenador {
-	private int id_entrenador;
+package pokemon;
+
+public class Entrenador {
+	private int idEntrenador;
 	private Pokemon equipo;
 	private Pokemon equipoSecundario;
 	private String nombre;
 	private int pokemonedas;
+
+	public Entrenador(){}
 	
-	public Clase_entrenador(int id_entrenador, Pokemon equipo, Pokemon equipoSecundario, String nombre,
-			int pokemonedas) {
-		super();
-		this.id_entrenador = id_entrenador;
+
+	public Entrenador(int idEntrenador, Pokemon equipo, Pokemon equipoSecundario, String nombre, int pokemonedas) {
+		this.idEntrenador = idEntrenador;
 		this.equipo = equipo;
 		this.equipoSecundario = equipoSecundario;
 		this.nombre = nombre;
 		this.pokemonedas = pokemonedas;
 	}
 
-	public int getId_entrenador() {
-		return id_entrenador;
-	}
+	public int getIdEntrenador() { return this.idEntrenador; }
+	public void setIdEntrenador(int idEntrenador) { this.idEntrenador = idEntrenador; }
 
-	public void setId_entrenador(int id_entrenador) {
-		this.id_entrenador = id_entrenador;
-	}
+	public Pokemon getEquipo() { return this.equipo; }
+	public void setEquipo(Pokemon equipo) { this.equipo = equipo; }
 
-	public Pokemon getEquipo() {
-		return equipo;
-	}
+	public Pokemon getEquipoSecundario() { return this.equipoSecundario; }
+	public void setEquipoSecundario(Pokemon equipoSecundario) { this.equipoSecundario = equipoSecundario; }
 
-	public void setEquipo(Pokemon equipo) {
-		this.equipo = equipo;
-	}
+	public String getNombre() { return this.nombre; }
+	public void setNombre(String nombre) { this.nombre = nombre; }
 
-	public Pokemon getEquipoSecundario() {
-		return equipoSecundario;
-	}
-
-	public void setEquipoSecundario(Pokemon equipoSecundario) {
-		this.equipoSecundario = equipoSecundario;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public int getPokemonedas() {
-		return pokemonedas;
-	}
-
-	public void setPokemonedas(int pokemonedas) {
-		this.pokemonedas = pokemonedas;
-	}
+	public int getPokemonedas() { return this.pokemonedas; }
+	public void setPokemonedas(int pokemonedas) { this.pokemonedas = pokemonedas; }
 
 	@Override
 	public String toString() {
-		return "Clase_entrenador [id_entrenador=" + id_entrenador + ", equipo=" + equipo + ", equipoSecundario="
-				+ equipoSecundario + ", nombre=" + nombre + ", pokemonedas=" + pokemonedas + ", getId_entrenador()="
-				+ getId_entrenador() + ", getEquipo()=" + getEquipo() + ", getEquipoSecundario()="
-				+ getEquipoSecundario() + ", getNombre()=" + getNombre() + ", getPokemonedas()=" + getPokemonedas()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+		return "{" +
+			" idEntrenador='" + getIdEntrenador() + "'" +
+			", equipo='" + getEquipo() + "'" +
+			", equipoSecundario='" + getEquipoSecundario() + "'" +
+			", nombre='" + getNombre() + "'" +
+			", pokemonedas='" + getPokemonedas() + "'" +
+			"}";
 	}
 	
 	

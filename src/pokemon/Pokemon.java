@@ -20,13 +20,12 @@ public class Pokemon {
 
     public Pokemon() {}
 
-    public Pokemon(int idPokemon, String nombre, String mote, int vitalidad, int ataque, int defensa,
-                    int ataqueEspecial, int defensaEspecial, int velocidad, int estamina,
-                    int nivel, int fertilidad, Tipo tipo1, Tipo tipo2, Estado estado) {
+
+    public Pokemon(int idPokemon, String nombre, String mote, int vitalidad, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int velocidad, int estamina, int nivel, int fertlidad, Tipo tipo1, Tipo tipo2, Estado estado) {
         this.idPokemon = idPokemon;
         this.nombre = nombre;
         this.mote = mote;
-        this. vitalidad = vitalidad;
+        this.vitalidad = vitalidad;
         this.ataque = ataque;
         this.defensa = defensa;
         this.ataqueEspecial = ataqueEspecial;
@@ -34,12 +33,12 @@ public class Pokemon {
         this.velocidad = velocidad;
         this.estamina = estamina;
         this.nivel = nivel;
-        this.fertlidad = fertilidad;
+        this.fertlidad = fertlidad;
         this.tipo1 = tipo1;
         this.tipo2 = tipo2;
         this.estado = estado;
     }
-
+    
     public int getIdPokemon() { return idPokemon; }
     public void setIdPokemon(int idPokemon) { this.idPokemon = idPokemon; }
 

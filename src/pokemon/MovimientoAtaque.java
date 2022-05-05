@@ -24,10 +24,10 @@ public class MovimientoAtaque extends Movimiento{
 
     @Override
     public String toString() {
-        return "{" +
+        return super.toString() + "{" +
             " potencia='" + getPotencia() + "'" +
             ", tipoElemento='" + getTipoElemento() + "'" +
-            "}" + super.toString();
+            "}";
     }
 
     public void consumirEstamina() {
