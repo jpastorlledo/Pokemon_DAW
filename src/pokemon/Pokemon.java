@@ -13,7 +13,7 @@ public class Pokemon {
     private int velocidad;
     private int estamina;
     private int nivel;
-    private int fertlidad = 5;
+    private int fertlidad;
     private Tipo tipo1;
     private Tipo tipo2;
     private Estado estado;
@@ -85,9 +85,29 @@ public class Pokemon {
     public Estado getEstado() { return estado; }
     public void setEstado(Estado estado) { this.estado = estado; }
 
+
     @Override
     public String toString() {
-        return "Pokemon [id=" + idPokemon + ", nombre=" + nombre + ", mote=" + mote + ", vitalidad=" + vitalidad + ", ataque=" + ataque + ", defensa=" + defensa + ", ataque especial=" + ataqueEspecial + ", defensa especial=" + defensaEspecial + ", velocidad=" + velocidad + ", estamina=" + estamina + ", nivel=" + nivel + ", fertilidad=" + fertlidad + ", primer tipo=" + tipo1 + ", segundo tipo " + tipo2 + ", estado " + estado + "]";
+        return "{" +
+            " idPokemon='" + getIdPokemon() + "'" +
+            ", nombre='" + getNombre() + "'" +
+            ", mote='" + getMote() + "'" +
+            ", vitalidad='" + getVitalidad() + "'" +
+            ", ataque='" + getAtaque() + "'" +
+            ", defensa='" + getDefensa() + "'" +
+            ", ataqueEspecial='" + getAtaqueEspecial() + "'" +
+            ", defensaEspecial='" + getDefensaEspecial() + "'" +
+            ", velocidad='" + getVelocidad() + "'" +
+            ", estamina='" + getEstamina() + "'" +
+            ", nivel='" + getNivel() + "'" +
+            ", fertlidad='" + getFertilidad() + "'" +
+            ", tipo1='" + getTipo1() + "'" +
+            ", tipo2='" + getTipo2() + "'" +
+            ", estado='" + getEstado() + "'" +
+            "}";
     }
+
+    
+
 
 }
