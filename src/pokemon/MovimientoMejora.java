@@ -36,5 +36,5 @@ public class MovimientoMejora extends Movimiento{
             "}";
     }
 
-
+    public void consumirEstamina(){}
 }
