@@ -52,4 +52,8 @@ public class Combate {
             "}";
     }
 
+    public void obtenerExperiencia(int experienciaObtenida, Pokemon pokemonJugador, Pokemon pokemonRival){
+         
+        experienciaObtenida = ((pokemonJugador.getNivel() + pokemonRival.getNivel())*10)/4;
+    }
 }
