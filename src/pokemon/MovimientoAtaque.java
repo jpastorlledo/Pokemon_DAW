@@ -29,8 +29,10 @@ public class MovimientoAtaque extends Movimiento{
             ", tipoElemento='" + getTipoElemento() + "'" +
             "}";
     }
-
-    public void consumirEstamina() {
+    
+    public void consumirEstamina(int costeEstamina) {
+        costeEstamina = potencia /2;
+        Pokemon.getEstamina() -= costeEstamina;
         
     }
 }

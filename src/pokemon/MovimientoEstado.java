@@ -28,6 +28,9 @@ public class MovimientoEstado extends Movimiento{
             "}";
     }
 
-    public void consumirEstamina(){}
+    public void consumirEstamina(int consumirEstamina){
+        consumirEstamina = numeroTurnos *10;
+        Pokemon.getEstamina() -= consumirEstamina;
+    }
 
 }
