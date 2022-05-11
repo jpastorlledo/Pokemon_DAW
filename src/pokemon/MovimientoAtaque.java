@@ -32,7 +32,7 @@ public class MovimientoAtaque extends Movimiento{
     
     public void consumirEstamina(int costeEstamina) {
         costeEstamina = potencia /2;
-        Pokemon.getEstamina() -= costeEstamina;
+        Pokemon.estamina -= costeEstamina;
         
     }
 }
