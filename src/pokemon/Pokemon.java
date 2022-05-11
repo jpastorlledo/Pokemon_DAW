@@ -6,7 +6,7 @@ public class Pokemon {
     private String nombre;
     private String mote;
     private int vitalidad;
-    private int ataque;
+    private double ataque;
     private int defensa;
     private int ataqueEspecial;
     private int defensaEspecial;
@@ -52,8 +52,8 @@ public class Pokemon {
     public int getVitalidad() { return vitalidad; }
     public void setVitalidad(int vitalidad) { this.vitalidad = vitalidad; }
 
-    public int getAtaque() { return ataque; }
-    public void setAtaque(int ataque) { this.ataque = ataque;}
+    public double getAtaque() { return ataque; }
+    public void setAtaque(double ataque) { this.ataque = ataque;}
 
     public int getDefensa() { return defensa; }
     public void setDefensa(int defensa) { this.defensa = defensa; }
@@ -141,56 +141,76 @@ public class Pokemon {
         String neutro = "Neutro";
         if ((pokemonJugador.tipo1 == Tipo.AGUA || pokemonJugador.tipo2 == Tipo.AGUA) && ((pokemonRival.tipo1 == Tipo.FUEGO || pokemonRival.tipo2 == Tipo.FUEGO) || (pokemonRival.tipo1 == Tipo.TIERRA || pokemonRival.tipo2 == Tipo.TIERRA))){
             nuevaPotencia = ataque * 2;
+            ataque = nuevaPotencia;
             return ventaja;
         }else if ((pokemonJugador.tipo1 == Tipo.FUEGO || pokemonJugador.tipo2 == Tipo.FUEGO) && ((pokemonRival.tipo1 == Tipo.PLANTA || pokemonRival.tipo2 == Tipo.PLANTA) || (pokemonRival.tipo1 == Tipo.BICHO || pokemonRival.tipo2 == Tipo.BICHO))){
             nuevaPotencia = ataque * 2;
+            ataque = nuevaPotencia;
             return ventaja;
         }else if ((pokemonJugador.tipo1 == Tipo.PLANTA || pokemonJugador.tipo2 == Tipo.PLANTA) && ((pokemonRival.tipo1 == Tipo.TIERRA || pokemonRival.tipo2 == Tipo.TIERRA) || (pokemonRival.tipo1 == Tipo.AGUA || pokemonRival.tipo2 == Tipo.AGUA))){
             nuevaPotencia = ataque * 2;
+            ataque = nuevaPotencia;
             return ventaja;
         }else if ((pokemonJugador.tipo1 == Tipo.BICHO || pokemonJugador.tipo2 == Tipo.BICHO) && ((pokemonRival.tipo1 == Tipo.TIERRA || pokemonRival.tipo2 == Tipo.TIERRA) || (pokemonRival.tipo1 == Tipo.AGUA || pokemonRival.tipo2 == Tipo.AGUA))){
             nuevaPotencia = ataque * 2;
+            ataque = nuevaPotencia;
             return ventaja;
         }else if ((pokemonJugador.tipo1 == Tipo.VOLADOR || pokemonJugador.tipo2 == Tipo.VOLADOR) && ((pokemonRival.tipo1 == Tipo.PLANTA || pokemonRival.tipo2 == Tipo.PLANTA) || (pokemonRival.tipo1 == Tipo.BICHO || pokemonRival.tipo2 == Tipo.BICHO))){
             nuevaPotencia = ataque * 2;
+            ataque = nuevaPotencia;
             return ventaja;
         }else if ((pokemonJugador.tipo1 == Tipo.ELECTRICO || pokemonJugador.tipo2 == Tipo.ELECTRICO) && ((pokemonRival.tipo1 == Tipo.VOLADOR || pokemonRival.tipo2 == Tipo.VOLADOR) || (pokemonRival.tipo1 == Tipo.AGUA || pokemonRival.tipo2 == Tipo.AGUA))){
             nuevaPotencia = ataque * 2;
+            ataque = nuevaPotencia;
             return ventaja;
         }else if((pokemonJugador.tipo1 == Tipo.TIERRA || pokemonJugador.tipo2 == Tipo.TIERRA) && ((pokemonRival.tipo1 == Tipo.FUEGO || pokemonRival.tipo2 == Tipo.FUEGO) || (pokemonRival.tipo1 == Tipo.ELECTRICO || pokemonRival.tipo2 == Tipo.ELECTRICO))){
             nuevaPotencia = ataque * 2;
+            ataque = nuevaPotencia;
             return ventaja;
         }
 
         if ((pokemonJugador.tipo1 == Tipo.AGUA || pokemonJugador.tipo2 == Tipo.AGUA) && ((pokemonRival.tipo1 == Tipo.PLANTA || pokemonRival.tipo2 == Tipo.PLANTA) || (pokemonRival.tipo1 == Tipo.ELECTRICO || pokemonRival.tipo2 == Tipo.ELECTRICO))){
             nuevaPotencia = ataque * 0.5;
+            ataque = nuevaPotencia;
             return desventaja;
         }else if ((pokemonJugador.tipo1 == Tipo.FUEGO || pokemonJugador.tipo2 == Tipo.FUEGO) && ((pokemonRival.tipo1 == Tipo.TIERRA || pokemonRival.tipo2 == Tipo.TIERRA) || (pokemonRival.tipo1 == Tipo.AGUA || pokemonRival.tipo2 == Tipo.AGUA))){
             nuevaPotencia = ataque * 0.5;
+            ataque = nuevaPotencia;
             return desventaja;
         }else if ((pokemonJugador.tipo1 == Tipo.PLANTA || pokemonJugador.tipo2 == Tipo.PLANTA) && ((pokemonRival.tipo1 == Tipo.FUEGO || pokemonRival.tipo2 == Tipo.FUEGO) || (pokemonRival.tipo1 == Tipo.BICHO || pokemonRival.tipo2 == Tipo.BICHO))){
             nuevaPotencia = ataque * 0.5;
+            ataque = nuevaPotencia;
             return desventaja;
         }else if ((pokemonJugador.tipo1 == Tipo.BICHO || pokemonJugador.tipo2 == Tipo.BICHO) && ((pokemonRival.tipo1 == Tipo.FUEGO || pokemonRival.tipo2 == Tipo.FUEGO) || (pokemonRival.tipo1 == Tipo.VOLADOR || pokemonRival.tipo2 == Tipo.VOLADOR))){
             nuevaPotencia = ataque * 0.5;
+            ataque = nuevaPotencia;
             return desventaja;
         }else if ((pokemonJugador.tipo1 == Tipo.VOLADOR || pokemonJugador.tipo2 == Tipo.VOLADOR) && ((pokemonRival.tipo1 == Tipo.ELECTRICO || pokemonRival.tipo2 == Tipo.ELECTRICO) || (pokemonRival.tipo1 == Tipo.TIERRA || pokemonRival.tipo2 == Tipo.TIERRA))){
             nuevaPotencia = ataque * 0.5;
+            ataque = nuevaPotencia;
             return desventaja;
         }else if ((pokemonJugador.tipo1 == Tipo.ELECTRICO || pokemonJugador.tipo2 == Tipo.ELECTRICO) && ((pokemonRival.tipo1 == Tipo.TIERRA || pokemonRival.tipo2 == Tipo.TIERRA) || (pokemonRival.tipo1 == Tipo.PLANTA || pokemonRival.tipo2 == Tipo.PLANTA))){
             nuevaPotencia = ataque * 0.5;
+            ataque = nuevaPotencia;
             return desventaja;
         }else if((pokemonJugador.tipo1 == Tipo.TIERRA || pokemonJugador.tipo2 == Tipo.TIERRA) && ((pokemonRival.tipo1 == Tipo.AGUA || pokemonRival.tipo2 == Tipo.AGUA) || (pokemonRival.tipo1 == Tipo.PLANTA || pokemonRival.tipo2 == Tipo.PLANTA))){
             nuevaPotencia = ataque * 0.5;
+            ataque = nuevaPotencia;
             return desventaja;
         }
 
         if((pokemonJugador.tipo1 == pokemonRival.tipo1) || (pokemonJugador.tipo1 == pokemonRival.tipo2) || (pokemonJugador.tipo2 == pokemonRival.tipo1) || (pokemonJugador.tipo2 == pokemonRival.tipo2)){
-            return neutro;
+            nuevaPotencia = ataque * 1.5;
+            ataque = nuevaPotencia;
+            return ventaja ;
         }
         
         return neutro;
     
     }
 
+        public void descansar(){
+        
+
+    }
 }
