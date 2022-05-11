@@ -45,6 +45,10 @@ public class Entrenador {
 	}
 	
 	
-	
+	//Introducir métodos para mover pokemon.
+
+    //Introducir método para capturar.
+
+    //Intoducir método para combatir.
 	
 }

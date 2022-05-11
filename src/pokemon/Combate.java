@@ -56,4 +56,16 @@ public class Combate {
          
         experienciaObtenida = ((pokemonJugador.getNivel() + pokemonRival.getNivel())*10)/4;
     }
+
+    //Introducir método para generar pokemon aleatorio.
+
+    //Introducir métodos para obtener niveles.
+
+    //Itroducir método para finalizar combate.
+
+    //Introducir método para retirarse.
+
+    //Introducir método para entregar pokemonedas.
+
+    
 }

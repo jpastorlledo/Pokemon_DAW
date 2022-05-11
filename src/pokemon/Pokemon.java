@@ -11,7 +11,7 @@ public class Pokemon {
     private int ataqueEspecial;
     private int defensaEspecial;
     private int velocidad;
-    private int estamina;
+    protected static int estamina;
     private int nivel;
     private int fertlidad;
     private Tipo tipo1;
@@ -131,10 +131,12 @@ public class Pokemon {
             velocidad =(int) (Math.random()*5+1);         
         } 
     
-      
+        //Aprender movimientos cada 3 niveles.  
 
     }
     
+        //Incluir método atacar.
+
     public String comprobarVentajaDesventaja(Pokemon pokemonJugador, Pokemon pokemonRival, double nuevaPotencia){
         String ventaja = "Ventaja";
         String desventaja = "Desventaja";
@@ -209,8 +211,9 @@ public class Pokemon {
     
     }
 
-        public void descansar(){
-        
+       
 
-    }
+        public void descansar(){}
+
+        //Introducir método aprender ataque 
 }

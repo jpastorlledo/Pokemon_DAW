@@ -36,5 +36,9 @@ public class MovimientoMejora extends Movimiento{
             "}";
     }
 
-    public void consumirEstamina(){}
+    public void consumirEstamina(int consumirEstamina){
+
+        consumirEstamina = numeroTurnos * 10;
+        Pokemon.estamina -= consumirEstamina;
+    }
 }
