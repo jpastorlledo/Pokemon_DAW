@@ -12,7 +12,7 @@ public class Pokemon {
     private int defensaEspecial;
     private int velocidad;
     protected static double estamina;
-    private int nivel;
+    protected static int nivel;
     private int fertlidad;
     private Tipo tipo1;
     private Tipo tipo2;
