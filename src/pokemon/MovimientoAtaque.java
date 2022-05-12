@@ -2,7 +2,7 @@ package pokemon;
 
 public class MovimientoAtaque extends Movimiento{
     
-    private int potencia;
+    protected static double potencia;
     private Tipo tipoElemento;
 
     public MovimientoAtaque(){ super(); }
@@ -15,8 +15,8 @@ public class MovimientoAtaque extends Movimiento{
     }
 
 
-    public int getPotencia() { return this.potencia; }
-    public void setPotencia(int potencia) { this.potencia = potencia; }
+    public double getPotencia() { return this.potencia; }
+    public void setPotencia(double potencia) { this.potencia = potencia; }
 
     public Tipo getTipoElemento() { return this.tipoElemento; }
     public void setTipoElemento(Tipo tipoElemento) { this.tipoElemento = tipoElemento; }
@@ -30,8 +30,8 @@ public class MovimientoAtaque extends Movimiento{
             "}";
     }
     
-    public void consumirEstamina(int costeEstamina) {
-        costeEstamina = potencia /2;
+    public void consumirEstamina(double costeEstamina) {
+        costeEstamina = (potencia /2);
         Pokemon.estamina -= costeEstamina;
         
     }
