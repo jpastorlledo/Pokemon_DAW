@@ -18,9 +18,11 @@ public class Pokemon {
     private Tipo tipo2;
     private Estado estado;
     private int experiencia;
-    Movimiento []movimiento = new Movimiento[4];
+    Movimiento []movimiento;
     
-    public Pokemon() {}
+    public Pokemon() {
+        this.movimiento = new Movimiento[4];
+    }
 
     public Pokemon(int idPokemon, String nombre, String mote, int vitalidad, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int velocidad, int estamina, int nivel, int fertlidad, Tipo tipo1, Tipo tipo2, Estado estado) {
         this.idPokemon = idPokemon;
@@ -38,6 +40,7 @@ public class Pokemon {
         this.tipo1 = tipo1;
         this.tipo2 = tipo2;
         this.estado = estado;
+        this.movimiento = new Movimiento[4];
     }
     
     public int getIdPokemon() { return idPokemon; }
