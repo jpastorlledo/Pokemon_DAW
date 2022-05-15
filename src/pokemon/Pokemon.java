@@ -130,12 +130,12 @@ public class Pokemon {
             experiencia -= (10 * nivel);
             nivel++;
 
-            vitalidad = numeroAleatorio(5);
-            ataque = numeroAleatorio(5);
-            defensa = numeroAleatorio(5);
-            ataqueEspecial = numeroAleatorio(5);
-            defensaEspecial = numeroAleatorio(5);
-            velocidad = numeroAleatorio(5);
+            vitalidad += numeroAleatorio(5);
+            ataque += numeroAleatorio(5);
+            defensa += numeroAleatorio(5);
+            ataqueEspecial += numeroAleatorio(5);
+            defensaEspecial += numeroAleatorio(5);
+            velocidad += numeroAleatorio(5);
         }
     
         //Aprender movimientos cada 3 niveles.  
