@@ -54,7 +54,7 @@ public class Pokemon {
     public void setMote(String mote) { this.mote = mote; }
 
     public int getVitalidad() { return vitalidad; }
-    public void setVitalidad(int vitalidad) { this.vitalidad = vitalidad; }
+    public void setVitalidad(int vitalidad) { this.vitalidad = (vitalidad<0)?0:vitalidad; }
 
     public double getAtaque() { return ataque; }
     public void setAtaque(double ataque) { this.ataque = ataque;}
@@ -72,7 +72,7 @@ public class Pokemon {
     public void setVelocidad(int velocidad) { this.velocidad = velocidad; }
 
     public double getEstamina() { return estamina; }
-    public void setEstamina(double estamina) { this.estamina = estamina; }
+    public void setEstamina(double estamina) { this.estamina = (estamina<0)?0:estamina; }
 
     public int getNivel() { return nivel; }
     public void setNivel(int nivel) { this.nivel = nivel; }
