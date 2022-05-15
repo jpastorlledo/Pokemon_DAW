@@ -12,8 +12,6 @@ public abstract class Movimiento {
         this.idMovimiento = idMovimiento;
         this.nombre = nombre;
     }
-    
-
 
     public int getIdMovimiento() { return this.idMovimiento; }
     public void setIdMovimiento(int idMovimiento) { this.idMovimiento = idMovimiento; }
@@ -30,5 +28,5 @@ public abstract class Movimiento {
             "}";
     }
 
-    public void consumirEstamina(Pokemon pokemon, double costeEstamina) {}
+    public abstract void consumirEstamina(Pokemon pokemon);
 }
