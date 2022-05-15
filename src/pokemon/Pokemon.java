@@ -123,6 +123,11 @@ public class Pokemon {
         return (int) (Math.random() * num) + 1;
     }
 
+    private void aprenderAtaque() {
+        if (nivel % 3 == 0) {
+            // Por hacer
+        }
+    }
 
     public void subirNivel() {
       
@@ -136,10 +141,9 @@ public class Pokemon {
             ataqueEspecial += numeroAleatorio(5);
             defensaEspecial += numeroAleatorio(5);
             velocidad += numeroAleatorio(5);
+        
+            aprenderAtaque();
         }
-    
-        //Aprender movimientos cada 3 niveles.  
-
     }
     
         //Incluir método atacar.
