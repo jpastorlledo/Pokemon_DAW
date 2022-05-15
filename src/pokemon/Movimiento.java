@@ -30,5 +30,5 @@ public abstract class Movimiento {
             "}";
     }
 
-    public void consumirEstamina(){}
+    public void consumirEstamina(Pokemon pokemon, double costeEstamina) {}
 }
