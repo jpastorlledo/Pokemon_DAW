@@ -1,7 +1,6 @@
 package pokemon;
 
 public class Pokemon {
-    
     private int idPokemon;
     private String nombre;
     private String mote;
@@ -18,7 +17,8 @@ public class Pokemon {
     private Tipo tipo2;
     private Estado estado;
     private int experiencia;
-    Movimiento []movimiento;
+    Movimiento []movimientosPosibles;
+    Movimiento []movimientosDisponibles;
     
     public Pokemon() {
         this.vitalidad = numeroAleatorio(10);
@@ -28,7 +28,8 @@ public class Pokemon {
         this.defensaEspecial = numeroAleatorio(10);
         this.velocidad = numeroAleatorio(10);
         this.estamina = numeroAleatorio(10);
-        this.movimiento = new Movimiento[4];
+        this.movimientosPosibles = new Movimiento[4];
+        this.movimientosDisponibles = new Movimiento[4];
         this.nivel = 1;
         this.fertlidad = 5;
     }
@@ -92,9 +93,11 @@ public class Pokemon {
     public int getExperiencia() { return this.experiencia; }
     public void setExperiencia(int experiencia) { this.experiencia = experiencia; }
 
-    public Movimiento[] getMovimiento() { return this.movimiento; }
-    public void setMovimiento(Movimiento[] movimiento) { this.movimiento = movimiento; }
+    public Movimiento[] getMovimientosDisponibles() { return this.movimientosDisponibles; }
+    public void setMovimientosDisponibles(Movimiento[] movimiento) { this.movimientosDisponibles = movimiento; }
 
+    public Movimiento[] getMovimientosPosibles() { return this.movimientosPosibles; }
+    public void setMovimientosPosibles(Movimiento[] movimiento) { this.movimientosPosibles = movimiento; }
 
     @Override
     public String toString() {
@@ -115,7 +118,8 @@ public class Pokemon {
             ", tipo2='" + getTipo2() + "'" +
             ", estado='" + getEstado() + "'" +
             ", experiencia='" + getExperiencia() + "'" +
-            ", movimiento='" + getMovimiento() + "'" +
+            ", movimientos disponibles='" + getMovimientosDisponibles() + "'" +
+            ", movimientos posibles='" + getMovimientosPosibles() + "'" +
             "}";
     }
 
