@@ -11,8 +11,8 @@ public class Pokemon {
     private int ataqueEspecial;
     private int defensaEspecial;
     private int velocidad;
-    protected static double estamina;
-    protected static int nivel;
+    private double estamina;
+    private int nivel;
     private int fertlidad;
     private Tipo tipo1;
     private Tipo tipo2;
@@ -22,6 +22,7 @@ public class Pokemon {
     
     public Pokemon() {
         this.movimiento = new Movimiento[4];
+        this.nivel = 1;
     }
 
     public Pokemon(int idPokemon, String nombre, String mote, int vitalidad, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int velocidad, int estamina, int nivel, int fertlidad, Tipo tipo1, Tipo tipo2, Estado estado) {
@@ -38,6 +39,8 @@ public class Pokemon {
         this.tipo1 = tipo1;
         this.tipo2 = tipo2;
         this.estado = estado;
+        this.nivel = nivel;
+        this.estamina = estamina;
         this.movimiento = new Movimiento[4];
     }
     
@@ -116,20 +119,20 @@ public class Pokemon {
             "}";
     }
 
-   
+    private int numeroAleatorio() { return (int) (Math.random() * 5) + 1; }
 
-    public void subirNivel(){
+    public void subirNivel() {
       
-        if (experiencia >= 10*nivel){
-            experiencia -= (10*nivel);
+        if (experiencia >= 10 * nivel) {
+            experiencia -= (10 * nivel);
             nivel++;
 
-            vitalidad =(int) (vitalidad + (Math.random()*5+1));
-            ataque =(int) (ataque + (Math.random()*5+1));
-            defensa =(int) (defensa + (Math.random()*5+1));
-            ataqueEspecial =(int) (Math.random()*5+1);
-            defensaEspecial =(int) (Math.random()*5+1);
-            velocidad =(int) (Math.random()*5+1);         
+            vitalidad = numeroAleatorio();
+            ataque = numeroAleatorio();
+            defensa = numeroAleatorio();
+            ataqueEspecial = numeroAleatorio();
+            defensaEspecial = numeroAleatorio();
+            velocidad = numeroAleatorio();
         } 
     
         //Aprender movimientos cada 3 niveles.  
