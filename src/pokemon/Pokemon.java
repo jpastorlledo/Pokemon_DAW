@@ -34,8 +34,6 @@ public class Pokemon {
         this.ataqueEspecial = ataqueEspecial;
         this.defensaEspecial = defensaEspecial;
         this.velocidad = velocidad;
-        this.estamina = estamina;
-        this.nivel = nivel;
         this.fertlidad = fertlidad;
         this.tipo1 = tipo1;
         this.tipo2 = tipo2;
