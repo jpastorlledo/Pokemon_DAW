@@ -101,26 +101,25 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "{" +
-            " idPokemon='" + getIdPokemon() + "'" +
-            ", nombre='" + getNombre() + "'" +
-            ", mote='" + getMote() + "'" +
-            ", vitalidad='" + getVitalidad() + "'" +
-            ", ataque='" + getAtaque() + "'" +
-            ", defensa='" + getDefensa() + "'" +
-            ", ataqueEspecial='" + getAtaqueEspecial() + "'" +
-            ", defensaEspecial='" + getDefensaEspecial() + "'" +
-            ", velocidad='" + getVelocidad() + "'" +
-            ", estamina='" + getEstamina() + "'" +
-            ", nivel='" + getNivel() + "'" +
-            ", fertlidad='" + getFertilidad() + "'" +
-            ", tipo1='" + getTipo1() + "'" +
-            ", tipo2='" + getTipo2() + "'" +
-            ", estado='" + getEstado() + "'" +
-            ", experiencia='" + getExperiencia() + "'" +
-            ", movimientos disponibles='" + getMovimientosDisponibles() + "'" +
-            ", movimientos posibles='" + getMovimientosPosibles() + "'" +
-            "}";
+        return "\t" +
+            "idPokemon: " + getIdPokemon() +
+            ", nombre= " + getNombre() +
+            ", mote= " + getMote() +
+            ", vitalidad= " + getVitalidad() +
+            ", ataque= " + getAtaque() +
+            ", defensa= " + getDefensa() +
+            ", ataqueEspecial= " + getAtaqueEspecial() +
+            ", defensaEspecial= " + getDefensaEspecial() +
+            ", velocidad= " + getVelocidad() +
+            ", estamina= " + getEstamina() +
+            ", nivel= " + getNivel() +
+            ", fertlidad= " + getFertilidad() +
+            ", tipo1= " + getTipo1() +
+            ", tipo2= " + getTipo2() +
+            ", estado= " + getEstado() +
+            ", experiencia= " + getExperiencia() +
+            ", movimientos disponibles= " + getMovimientosDisponibles() +
+            ", movimientos posibles= " + getMovimientosPosibles();
     }
 
     private int numeroAleatorio(int num) {
