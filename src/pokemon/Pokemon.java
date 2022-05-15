@@ -21,27 +21,27 @@ public class Pokemon {
     Movimiento []movimiento;
     
     public Pokemon() {
+        this.vitalidad = numeroAleatorio(10);
+        this.ataque = numeroAleatorio(10);
+        this.defensa = numeroAleatorio(10);
+        this.ataqueEspecial = numeroAleatorio(10);
+        this.defensaEspecial = numeroAleatorio(10);
+        this.velocidad = numeroAleatorio(10);
+        this.estamina = numeroAleatorio(10);
         this.movimiento = new Movimiento[4];
         this.nivel = 1;
+        this.fertlidad = 5;
     }
 
-    public Pokemon(int idPokemon, String nombre, String mote, int vitalidad, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int velocidad, int estamina, int nivel, int fertlidad, Tipo tipo1, Tipo tipo2, Estado estado) {
+    public Pokemon(int idPokemon, String nombre, String mote, int nivel, Tipo tipo1, Tipo tipo2, Estado estado) {
+        this();
         this.idPokemon = idPokemon;
         this.nombre = nombre;
         this.mote = mote;
-        this.vitalidad = vitalidad;
-        this.ataque = ataque;
-        this.defensa = defensa;
-        this.ataqueEspecial = ataqueEspecial;
-        this.defensaEspecial = defensaEspecial;
-        this.velocidad = velocidad;
-        this.fertlidad = fertlidad;
         this.tipo1 = tipo1;
         this.tipo2 = tipo2;
         this.estado = estado;
         this.nivel = nivel;
-        this.estamina = estamina;
-        this.movimiento = new Movimiento[4];
     }
     
     public int getIdPokemon() { return idPokemon; }
@@ -119,7 +119,10 @@ public class Pokemon {
             "}";
     }
 
-    private int numeroAleatorio() { return (int) (Math.random() * 5) + 1; }
+    private int numeroAleatorio(int num) {
+        return (int) (Math.random() * num) + 1;
+    }
+
 
     public void subirNivel() {
       
@@ -127,13 +130,13 @@ public class Pokemon {
             experiencia -= (10 * nivel);
             nivel++;
 
-            vitalidad = numeroAleatorio();
-            ataque = numeroAleatorio();
-            defensa = numeroAleatorio();
-            ataqueEspecial = numeroAleatorio();
-            defensaEspecial = numeroAleatorio();
-            velocidad = numeroAleatorio();
-        } 
+            vitalidad = numeroAleatorio(5);
+            ataque = numeroAleatorio(5);
+            defensa = numeroAleatorio(5);
+            ataqueEspecial = numeroAleatorio(5);
+            defensaEspecial = numeroAleatorio(5);
+            velocidad = numeroAleatorio(5);
+        }
     
         //Aprender movimientos cada 3 niveles.  
 
