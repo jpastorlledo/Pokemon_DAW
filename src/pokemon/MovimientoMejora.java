@@ -36,9 +36,7 @@ public class MovimientoMejora extends Movimiento{
             "}";
     }
 
-    public void consumirEstamina(int consumirEstamina){
-
-        consumirEstamina = numeroTurnos * 10;
-        Pokemon.estamina -= consumirEstamina;
+    public void consumirEstamina(Pokemon pokemon) {
+        pokemon.setEstamina(pokemon.getEstamina() - numeroTurnos * 10);
     }
 }

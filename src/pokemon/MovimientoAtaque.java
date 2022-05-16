@@ -1,12 +1,11 @@
 package pokemon;
 
-public class MovimientoAtaque extends Movimiento{
+public class MovimientoAtaque extends Movimiento {
     
-    protected static double potencia;
+    private double potencia;
     private Tipo tipoElemento;
 
-    public MovimientoAtaque(){ super(); }
-
+    public MovimientoAtaque() { super(); }
 
     public MovimientoAtaque(int idMovimiento, String nombre, int potencia, Tipo tipoElemento) {
         super(idMovimiento, nombre);
@@ -30,9 +29,7 @@ public class MovimientoAtaque extends Movimiento{
             "}";
     }
     
-    public void consumirEstamina(double costeEstamina) {
-        costeEstamina = (potencia /2);
-        Pokemon.estamina -= costeEstamina;
-        
+    public void consumirEstamina(Pokemon pokemon) {
+        pokemon.setEstamina(pokemon.getEstamina() - potencia / 2);
     }
 }

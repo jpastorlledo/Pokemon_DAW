@@ -52,14 +52,16 @@ public class Combate {
             "}";
     }
 
+    //Introducir métodos para obtener niveles.
     public void obtenerExperiencia(int experienciaObtenida, Pokemon pokemonJugador, Pokemon pokemonRival){
          
         experienciaObtenida = ((pokemonJugador.getNivel() + pokemonRival.getNivel())*10)/4;
     }
 
+     //Introducir método para generar pokemon aleatorio.
     public Pokemon generarPokemonAleatorio(Pokemon pokemonRival, Pokemon pokemonJugador){
 
-        pokemonJugador.nivel = pokemonRival.nivel;
+        pokemonRival.setNivel(pokemonJugador.getNivel());
 
         if (pokemonRival.getVitalidad() == 0){
             return pokemonRival;
@@ -69,9 +71,9 @@ public class Combate {
 
     }
 
-    //Introducir método para generar pokemon aleatorio.
+   
 
-    //Introducir métodos para obtener niveles.
+    
 
     //Itroducir método para finalizar combate.
 
