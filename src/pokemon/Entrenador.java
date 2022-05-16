@@ -53,12 +53,12 @@ public class Entrenador {
 		return "nombre: " + getNombre() + "\n" +
 			   "id entrenador: " + getIdEntrenador() + "\n" +
 			   "Pokemonedas: " + getPokemonedas() + "\n" +
-		       "Equipo Pincipal:\n" + equipoStr + "\n\n" +
+		       "Equipo Principal:\n" + equipoStr + "\n\n" +
 			   "Equipo Secundario: \n" + equipoSecundarioStr;
 	}
 	
 	
-	public void moverEquitoToSecundario(Pokemon pokemon) {
+	public void moverEquipoToSecundario(Pokemon pokemon) {
 		if (equipo.length > 1) {
 			Pokemon p;
 
@@ -72,6 +72,27 @@ public class Entrenador {
 						if (equipoSecundario[j] == null) {
 							equipoSecundario[j] = p;
 							break;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	public void moverSecundarioToEquipo(Pokemon pokemon) {
+		if(equipoSecundario.length > 0) {
+			Pokemon p;
+
+			for (int i=0; i < equipoSecundario.length; i++){
+				p = equipoSecundario[i];
+
+					if(p.getIdPokemon() == pokemon.getIdPokemon()) {
+						equipoSecundario[i] = null;
+
+						for(int j= 0; j < equipo.length; j++) {
+							if (equipo[j] == null) {
+								equipo[j] = p;
+								break;
 						}
 					}
 				}
