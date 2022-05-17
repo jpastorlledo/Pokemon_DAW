@@ -1,14 +1,21 @@
 package pokemon;
 
+
 import java.sql.Connection;
+import java.io.IOException;
 import java.sql.*;
 
 
+
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class App extends Application {
     public static void main(String[] args) {
+
         System.out.println("Hello, World!");
 
         String url = "jdbc:mysql://localhost:3306/pokemon ";
@@ -42,14 +49,24 @@ public class App extends Application {
 			e.printStackTrace();
 		} 
         
+
     }
 
     
 
 
     @Override
-    public void start(Stage arg0) throws Exception {
-        // TODO Auto-generated method stub
+    public void start(Stage primaryStage) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("  ./vistas/descansar.fxml"));
+            Scene scene = new Scene(root);
+
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
         
     }
 }
