@@ -25,15 +25,15 @@ public class Test {
         p4 = new Pokemon(4, "P4", "P4", 4, Tipo.FUEGO, null, Estado.SIN_ESTADO, 30);
         p5 = new Pokemon(5, "P5", "P5", 5, Tipo.PLANTA, null, Estado.SIN_ESTADO, 50);
 
-        Pokemon []equipo = {p1, p3, p4};
+        Pokemon []equipo = {p1, p2, p3, p4};
         Pokemon []secundario = new Pokemon[100];
-        secundario[0] = p2;
+        secundario[0] = p5;
 
         e1 = new Entrenador(1, equipo, secundario, "Pepema");
         
         System.out.println(e1);
 
-        e1.moverSecundarioToEquipo(p2);
+        e1.moverEquipoToSecundario(p2);
         System.out.println(e1);
 
         
