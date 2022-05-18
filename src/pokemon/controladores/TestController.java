@@ -11,10 +11,10 @@ import javafx.scene.control.Button;
 public class TestController implements Initializable{
 
     @FXML
-    private Button btnDescansar;
+    private Button btnEntrar;
 
     @FXML
-    private void descansar(ActionEvent event){
+    private void entrar(ActionEvent event){
         System.out.println("Hello World!");
     }
 
