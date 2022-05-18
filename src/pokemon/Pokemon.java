@@ -27,14 +27,13 @@ public class Pokemon {
         this.ataqueEspecial = numeroAleatorio(10);
         this.defensaEspecial = numeroAleatorio(10);
         this.velocidad = numeroAleatorio(10);
-        this.estamina = numeroAleatorio(10);
         this.movimientosPosibles = new Movimiento[4];
         this.movimientosDisponibles = new Movimiento[4];
         this.nivel = 1;
         this.fertlidad = 5;
     }
 
-    public Pokemon(int idPokemon, String nombre, String mote, int nivel, Tipo tipo1, Tipo tipo2, Estado estado) {
+    public Pokemon(int idPokemon, String nombre, String mote, int nivel, Tipo tipo1, Tipo tipo2, Estado estado, double estamina) {
         this();
         this.idPokemon = idPokemon;
         this.nombre = nombre;
@@ -43,6 +42,7 @@ public class Pokemon {
         this.tipo2 = tipo2;
         this.estado = estado;
         this.nivel = nivel;
+        this.estamina = estamina;
     }
     
     public int getIdPokemon() { return idPokemon; }
