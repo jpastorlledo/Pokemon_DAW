@@ -1,6 +1,6 @@
-package pokemon;
+package modelo;
 
-import pokemon.Pokemon;
+
 
 public class Test {
 

@@ -1,4 +1,4 @@
-package pokemon.vistas;
+package controladores;
 
 public class EntrarController  {
     

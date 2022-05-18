@@ -1,4 +1,4 @@
-package pokemon;
+package modelo;
 
 public abstract class Movimiento {
     

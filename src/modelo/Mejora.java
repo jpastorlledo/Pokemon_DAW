@@ -1,4 +1,4 @@
-package pokemon;
+package modelo;
 
 public enum Mejora {
     MEJORA_ATAQUE, MEJORA_DEFENSA, MEJORA_ATAQUE_ESPECIAL, MEJORA_DEFENSA_EPECIAL, MEJORA_VELOCIDAD;

@@ -1,4 +1,4 @@
-package pokemon;
+package modelo;
 
 
 import java.sql.Connection;
@@ -27,6 +27,9 @@ public class App extends Application {
 		    Connection connection = DriverManager.getConnection(url, login, password);
 
 		    System.out.println("Conexión establecida");
+
+
+			launch(args);
             /*
             mostrarPokemon(connection);
 
@@ -52,8 +55,18 @@ public class App extends Application {
 
     }
 
-    @Override
-    public void start(Stage arg0) throws Exception {
+	@Override
+    public void start(Stage primaryStage) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("../vistas/btnEntrar.fxml"));
+            Scene scene = new Scene (root);
+
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            
+            e.printStackTrace();
+        }
         
         
     }

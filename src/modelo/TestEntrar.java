@@ -1,4 +1,4 @@
-package pokemon.modelo;
+package modelo;
 
 import java.io.IOException;
 
