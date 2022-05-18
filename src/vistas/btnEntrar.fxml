@@ -88,7 +88,7 @@
          <children>
             <ImageView fitHeight="400.0" fitWidth="675.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@pokemon%20wallpaper.jpg" />
+                  <Image url="@../../img/pokemonWallpaper.jpg" />
                </image>
             </ImageView>
             <Button fx:id="btnEntrar" layoutX="246.0" layoutY="298.0" mnemonicParsing="false" onAction="#entrar" prefHeight="36.0" prefWidth="147.0" text="Entrar">
