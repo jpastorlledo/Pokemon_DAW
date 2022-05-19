@@ -323,7 +323,13 @@ public class Pokemon {
                 pokemon.setNumeroPokedex(rs.getInt("NUM_POKEDEX"));
                 pokemon.setNombre(rs.getString("NOMBRE"));
                 pokemon.setTipo1(Tipo.valueOf(rs.getString("tipo1")));
-                pokemon.setTipo2(Tipo.valueOf(rs.getString("tipo2")));
+
+                if(rs.getObject("tipo2")==null){
+                    pokemon.setTipo2(Tipo.NULO);
+                }else{
+                    pokemon.setTipo2(Tipo.valueOf(rs.getString("tipo2")));
+                }
+                
                 
                 
                 System.out.println(pokemon.toString());

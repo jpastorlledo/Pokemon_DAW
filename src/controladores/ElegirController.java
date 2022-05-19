@@ -22,15 +22,15 @@ public class ElegirController implements Initializable{
      
     @FXML
     private void capturar(ActionEvent event)throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../vistas/menupokemon.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../vistas/menuCapturar.fxml"));
         Parent root = loader.load();
-        ElegirController controller = loader.getController();
+        
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
         stage.showAndWait();
-        stage.close();
+        //stage.close();
 
     }
 
