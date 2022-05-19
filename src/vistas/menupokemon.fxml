@@ -87,12 +87,11 @@
          <children>
             <ImageView fitHeight="377.0" fitWidth="662.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Desktop/pokemonv2/Pokemon_DAW/img/MenuPokemon.jpg" />
+                  <Image url="C:\Users\Paco\Desktop\pokemonv2\Pokemon_DAW\img\MenuPokemon.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="btnCapturar" layoutX="272.0" layoutY="103.0" mnemonicParsing="false" onAction="#capturar" prefHeight="34.0" prefWidth="118.0" text="Capturar" />
-            <Button fx:id="btnCombate" layoutX="272.0" layoutY="200.0" mnemonicParsing="false" onAction="#combate" prefHeight="34.0" prefWidth="118.0" text="Combate" />
-            <Button fx:id="btnSalir" layoutX="529.0" layoutY="307.0" mnemonicParsing="false" onAction="#salir" prefHeight="34.0" prefWidth="118.0" text="Salir" />
+            <Button fx:id="btnCapturar" layoutX="290.0" layoutY="105.0" mnemonicParsing="false" onAction="#capturar" prefHeight="34.0" prefWidth="118.0" text="Capturar" />
+            <Button fx:id="btnCombate" layoutX="290.0" layoutY="198.0" mnemonicParsing="false" onAction="#combate" prefHeight="34.0" prefWidth="118.0" text="Combate" />
          </children>
     </AnchorPane>
   </children>

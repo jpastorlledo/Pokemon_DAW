@@ -11,23 +11,26 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class TestController implements Initializable{
+public class MenuInicialController implements Initializable{
 
     @FXML
     private Button btnEntrar;
-    private Object stage;
+   
 
     @FXML
     private void entrar(ActionEvent event)throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/btnEntrar.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../vistas/menupokemon.fxml"));
         Parent root = loader.load();
         ElegirController controller = loader.getController();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(scene);
         stage.showAndWait();
-        ((Stage) this.stage).close();
+        stage.close();
 
     }
 

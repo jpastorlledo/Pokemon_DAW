@@ -43,7 +43,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.TestController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.MenuInicialController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -88,7 +88,7 @@
          <children>
             <ImageView fitHeight="400.0" fitWidth="675.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@C:\Users\Paco\Desktop\pokemonv2\Pokemon_DAW\img\pokemonWallpaper.jpg" />
+                  <Image url="C:\Users\Paco\Desktop\pokemonv2\Pokemon_DAW\img\pokemonWallpaper.jpg" />
                </image>
             </ImageView>
             <Button fx:id="btnEntrar" layoutX="264.0" layoutY="296.0" mnemonicParsing="false" onAction="#entrar" prefHeight="36.0" prefWidth="147.0" text="Entrar">
