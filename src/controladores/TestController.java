@@ -21,7 +21,7 @@ public class TestController implements Initializable{
 
     @FXML
     private void entrar(ActionEvent event)throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/btnEntrar.FXML"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/btnEntrar.fxml"));
         Parent root = loader.load();
         ElegirController controller = loader.getController();
         Scene scene = new Scene(root);

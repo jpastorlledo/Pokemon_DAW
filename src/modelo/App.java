@@ -16,8 +16,6 @@ import javafx.stage.Stage;
 public class App extends Application {
     public static void main(String[] args) {
 
-        System.out.println("Hello, World!");
-
         String url = "jdbc:mysql://localhost:3306/pokemon ";
 		String login = "root";
 		String password = "";
@@ -58,7 +56,7 @@ public class App extends Application {
 	@Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../vistas/btnEntrar.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../vistas/menuInicial.fxml"));
             Scene scene = new Scene (root);
 
             primaryStage.setScene(scene);
