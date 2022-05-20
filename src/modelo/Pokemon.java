@@ -386,7 +386,7 @@ public class Pokemon {
          * @throws SQLException
          */
         public void insertarPokemon(Connection con) throws SQLException {
-            String sentencia ="INSERT INTO POKEMON_ENTRENADOR(ID_POKEMON, NUM_POKEDEX, ID_ENTRENADOR, MOTE, VITALIDAD, ATAQUE, ,ATAQUE_ESP, DEFENSA, DEFENSA_ESP, ESTAMINA, VELOCIDAD, NIVEL, FERTILIDAD, EQUIPO, EXPERIENCIA) VALUES("
+            String sentencia ="INSERT INTO POKEMON_ENTRENADOR(ID_POKEMON, NUM_POKEDEX, ID_ENTRENADOR, MOTE, VITALIDAD, ATAQUE, ATAQUE_ESP, DEFENSA, DEFENSA_ESP, ESTAMINA, VELOCIDAD, NIVEL, FERTILIDAD, EQUIPO, EXPERIENCIA) VALUES("
                                                         + this.getIdPokemon()
                                                         +", "+this.getNumeroPokedex()
                                                         +", 1"
