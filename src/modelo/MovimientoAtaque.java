@@ -30,6 +30,6 @@ public class MovimientoAtaque extends Movimiento {
     }
     
     public void consumirEstamina(Pokemon pokemon) {
-        pokemon.setEstamina(pokemon.getEstamina() - potencia / 2);
+        
     }
 }

@@ -29,12 +29,12 @@ public class Pokemon {
     private String nombre;
     private String mote;
     private int vitalidad;
-    private double ataque;
+    private int ataque;
     private int defensa;
     private int ataqueEspecial;
     private int defensaEspecial;
     private int velocidad;
-    private double estamina;
+    private int estamina;
     private int nivel;
     private int fertlidad;
     private Tipo tipo1;
@@ -72,7 +72,7 @@ public class Pokemon {
      * @param estado Estado en el que se encuentra el pokemon.
      * @param estamina Estamina del pokemon.
      */
-    public Pokemon(int idPokemon, String nombre, String mote, int nivel, Tipo tipo1, Tipo tipo2, Estado estado, double estamina) {
+    public Pokemon(int idPokemon, String nombre, String mote, int nivel, Tipo tipo1, Tipo tipo2, Estado estado, int estamina) {
         this();
         this.idPokemon = idPokemon;
         this.nombre = nombre;
@@ -99,8 +99,8 @@ public class Pokemon {
     public int getVitalidad() { return vitalidad; }
     public void setVitalidad(int vitalidad) { this.vitalidad = (vitalidad<0)?0:vitalidad; }
 
-    public double getAtaque() { return ataque; }
-    public void setAtaque(double ataque) { this.ataque = ataque;}
+    public int getAtaque() { return ataque; }
+    public void setAtaque(int ataque) { this.ataque = ataque;}
 
     public int getDefensa() { return defensa; }
     public void setDefensa(int defensa) { this.defensa = defensa; }
@@ -114,8 +114,8 @@ public class Pokemon {
     public int getVelocidad() { return velocidad; }
     public void setVelocidad(int velocidad) { this.velocidad = velocidad; }
 
-    public double getEstamina() { return estamina; }
-    public void setEstamina(double estamina) { this.estamina = (estamina<0)?0:estamina; }
+    public int getEstamina() { return estamina; }
+    public void setEstamina(int estamina) { this.estamina = (estamina<0)?0:estamina; }
 
     public int getNivel() { return nivel; }
     public void setNivel(int nivel) { this.nivel = nivel; }
