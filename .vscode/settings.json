@@ -3,6 +3,7 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
+<<<<<<< HEAD
         "c:\\Users\\JOSEMANUELPASTORLLED\\Desktop\\mysql-connector-java-8.0.27.jar",
         "c:\\Users\\Paco\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.base.jar",
         "c:\\Users\\Paco\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.controls.jar",
@@ -38,5 +39,8 @@
         "c:\\javafx-sdk-18.0.1\\lib\\javafx.swing.jar",
         "c:\\javafx-sdk-18.0.1\\lib\\javafx.web.jar",
         "c:\\javafx-sdk-18.0.1\\lib\\javafx-swt.jar"
+=======
+        "c:\\Users\\JOSEMANUELPASTORLLED\\Desktop\\mysql-connector-java-8.0.27.jar"
+>>>>>>> f9418e103eb8218bc18442989b64ca51b75717d1
     ]
 }
