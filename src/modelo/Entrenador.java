@@ -1,16 +1,29 @@
 package modelo;
-
+ /**
+  * Está compuesto por diferentes atributos como son el idEntrenador, el equipo, el equipoSecundario, el nombre y las pokemonedas.
+  * @author Francisco Mateos
+  * @author Jose Manuel Pastor
+  */
 public class Entrenador {
 	private int idEntrenador;
 	private Pokemon []equipo;
 	private Pokemon []equipoSecundario;
 	private String nombre;
 	private int pokemonedas;
-
+	/**
+	 * Este es el comstructor vacio de Entrenador.
+	 */
 	public Entrenador() {
 		this.pokemonedas = (int) (Math.random() * (1000 - 800 + 1) + 800);
 	}
 	
+	/**
+	 * Este es el constructor parametrizado de Entrenador.
+	 * @param idEntrenador Esto es como identificamos al entrenador.
+	 * @param equipo Este es el equipo principal.
+	 * @param equipoSecundario Este es el equipo secundario.
+	 * @param nombre Este es el nombre del entrenador.
+	 */
 	public Entrenador(int idEntrenador, Pokemon []equipo, Pokemon []equipoSecundario, String nombre) {
 		this();
 		this.idEntrenador = idEntrenador;
@@ -57,7 +70,10 @@ public class Entrenador {
 			   "Equipo Secundario: \n" + equipoSecundarioStr;
 	}
 	
-	
+	/**
+	 * Este es un metodo para mover del equipo principal al secundario.
+	 * @param pokemon
+	 */
 	public void moverEquipoToSecundario(Pokemon pokemon) {
 		if (equipo.length > 1) {
 			Pokemon p;
@@ -78,7 +94,10 @@ public class Entrenador {
 			}
 		}
 	}
-
+	/**
+	 * Este es un metodo para mover del equipo secundario al principal.
+	 * @param pokemon
+	 */
 	public void moverSecundarioToEquipo(Pokemon pokemon) {
 		if(equipoSecundario.length > 0) {
 			Pokemon p;

@@ -6,19 +6,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
-
+    /**
+     * Está compuesto por un listado de turnos, un espacio para qur guarde el fichero, por un jugador, un rival, un ganador, un numero de turno, y el numero de pokemons ko de jugador y de rival.
+     * @author Francisco Mateos
+     * @author Jose Manuel Pastor 
+     */
 public class Combate {
     private List<Turno>turnos;
     public static final String PATH= "combate.log";
-
-    
     private Entrenador jugador;
     private Entrenador rival;
     private Entrenador ganador;
     private Turno numeroTurno;
     private Pokemon pokemonKoJugador;
     private Pokemon pokemonKoRival;
-
+    /**
+     * Esto es un método para crear un LinkedList.
+     */
     public Combate(){
         turnos = new LinkedList<>();
     } 
@@ -52,7 +56,15 @@ public class Combate {
     
 
     }
-
+    /**
+     * Constructor parametrizado de Combate.
+     * @param jugador Jugador se entrenta a rival
+     * @param rival Es el rival del jugador
+     * @param ganador Es el ganador del combate
+     * @param numeroTurno Es el numero de turno 
+     * @param pokemonKoJugador Son los Pokemon Ko del jugador
+     * @param pokemonKoRival Son los Pokemon Ko del rival
+     */
     public Combate(Entrenador jugador, Entrenador rival, Entrenador ganador, Turno numeroTurno, Pokemon pokemonKoJugador, Pokemon pokemonKoRival) {
         this.jugador = jugador;
         this.rival = rival;
@@ -94,13 +106,23 @@ public class Combate {
             "}";
     }
 
-    //Introducir métodos para obtener niveles.
+    /**
+     * Este método es para obtener experiencia (En proceso)
+     * @param experienciaObtenida Es la experiencia obtenida
+     * @param pokemonJugador Es el pokemon del jugador
+     * @param pokemonRival Es el pokemon del rival
+     */
     public void obtenerExperiencia(int experienciaObtenida, Pokemon pokemonJugador, Pokemon pokemonRival){
          
         experienciaObtenida = ((pokemonJugador.getNivel() + pokemonRival.getNivel())*10)/4;
     }
 
-     //Introducir método para generar pokemon aleatorio.
+     /**
+      * Este método es para generar un pokemon aleatorio (En proceso)
+      * @param pokemonRival Es el pokemon del rival
+      * @param pokemonJugador Es el pokemon del jugador
+      * @return
+      */
     public Pokemon generarPokemonAleatorio(Pokemon pokemonRival, Pokemon pokemonJugador){
 
         pokemonRival.setNivel(pokemonJugador.getNivel());
