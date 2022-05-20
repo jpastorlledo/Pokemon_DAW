@@ -24,7 +24,7 @@ public class MenuCapturarController implements Initializable{
     private Button btnGenPok;
 
     @FXML 
-    Button btnCapturarPokemon;
+    private Button btnCapturarPokemon;
    
 
     @FXML
