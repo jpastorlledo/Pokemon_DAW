@@ -87,7 +87,7 @@
          <children>
             <ImageView fitHeight="400.0" fitWidth="666.0" layoutX="-18.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Downloads/imagenCapturar.png" />
+                  <Image url="C:\Users\Paco\Desktop\pokemonv2\Pokemon_DAW\img\imagenCapturar.png" />
                </image>
             </ImageView>
             <Button fx:id="btnCapturar" layoutX="385.0" layoutY="298.0" mnemonicParsing="false" onAction="#capturar" text="Capturar" />

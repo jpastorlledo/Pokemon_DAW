@@ -22,7 +22,7 @@ public class ElegirController implements Initializable{
      
     @FXML
     private void capturar(ActionEvent event)throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../vistas/menuCapturar.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../vistas/menuCapturarP.fxml"));
         Parent root = loader.load();
         
         Scene scene = new Scene(root);
