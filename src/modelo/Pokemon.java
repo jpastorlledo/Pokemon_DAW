@@ -302,66 +302,55 @@ public class Pokemon {
                 pokemon.setNumeroPokedex(rs.getInt("NUM_POKEDEX"));
                 pokemon.setNombre(rs.getString("NOMBRE"));
                 pokemon.setTipo1(Tipo.valueOf(rs.getString("tipo1")));
-                pokemon.setTipo2(Tipo.valueOf(rs.getString("tipo2")));
-                
-                
-                System.out.println(pokemon.toString());
-            }
-            statement.close();
-        }
-
-        public static void calcularMayorId(Connection con) throws SQLException {		
-            String consulta = "SELECT MAX(ID_POKEMON) FROM POKEMON_ENTRENADOR"; 
-            
-            Statement statement = con.createStatement();
-            ResultSet rs = statement.executeQuery(consulta);
-
-    
-            Pokemon pokemon = null;
-            while (rs.next()) {
-                pokemon = new Pokemon();
-                pokemon.setNumeroPokedex(rs.getInt("NUM_POKEDEX"));
-                pokemon.setNombre(rs.getString("NOMBRE"));
-                pokemon.setTipo1(Tipo.valueOf(rs.getString("tipo1")));
 
                 if(rs.getObject("tipo2")==null){
                     pokemon.setTipo2(Tipo.NULO);
                 }else{
                     pokemon.setTipo2(Tipo.valueOf(rs.getString("tipo2")));
-                }
-                
                 
                 
                 System.out.println(pokemon.toString());
-            }
+                }
             statement.close();
+            }   
         }
 
+        public void calcularMayorId(Connection con) throws SQLException {		
+            String consulta = "SELECT MAX(ID_POKEMON) FROM POKEMON_ENTRENADOR"; 
+            
+            Statement statement = con.createStatement();
+            ResultSet rs = statement.executeQuery(consulta);
+
+            while (rs.next()) {
+                
+                this.setIdPokemon(rs.getInt(1)+ 1);
+                }
+                statement.close();
+            }
 
 
-
-        public static void insertarPokemon(Connection con, Pokemon pokemon) throws SQLException {
+        public void insertarPokemon(Connection con) throws SQLException {
             String sentencia ="INSERT INTO POKEMON_ENTRENADOR(ID_POKEMON, NUM_POKEDEX, ID_ENTRENADOR, MOTE, VITALIDAD, ATAQUE, ,ARAQUE_ESP, DEFENSA, DEFENSA_ESP, ESTAMINA, VELOCIDAD, NIVEL, FERTILIDAD, EXPERIENCIA) VALUES("
-                                                        + pokemon.getIdPokemon()
-                                                        +", '"+pokemon.getNumeroPokedex()
-                                                        +", '"+pokemon.getMote()
-                                                        +", '"+pokemon.getVitalidad()
-                                                        +", '"+pokemon.getAtaque()
-                                                        +", '"+pokemon.getAtaqueEspecial()
-                                                        +", '"+pokemon.getDefensa()
-                                                        +", '"+pokemon.getDefensaEspecial()
-                                                        +", '"+pokemon.getEstamina()
-                                                        +", '"+pokemon.getVelocidad()
-                                                        +", '"+pokemon.getNivel()
-                                                        +", '"+pokemon.getFertilidad()
-                                                        +", '"+pokemon.getExperiencia()
+                                                        + this.getIdPokemon()
+                                                        +", '"+this.getNumeroPokedex()
+                                                        +", '"+this.getMote()
+                                                        +", '"+this.getVitalidad()
+                                                        +", '"+this.getAtaque()
+                                                        +", '"+this.getAtaqueEspecial()
+                                                        +", '"+this.getDefensa()
+                                                        +", '"+this.getDefensaEspecial()
+                                                        +", '"+this.getEstamina()
+                                                        +", '"+this.getVelocidad()
+                                                        +", '"+this.getNivel()
+                                                        +", '"+this.getFertilidad()
+                                                        +", '"+this.getExperiencia()
                                                         +"')";
             Statement stmt = null;
             try {
             stmt = con.createStatement();
 			stmt.executeUpdate(sentencia);
                 
-                System.out.println("Nuevo pokemon insertado. "+pokemon.getNombre());
+                System.out.println("Nuevo pokemon insertado. "+ this.getNombre());
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -369,6 +358,25 @@ public class Pokemon {
             }
                                                            
         }
+
+        public void probabilidadCaptura(Connection con) throws SQLException{
+            int numero = 0;
+
+            numero = this.numeroAleatorio(3);
+
+            if (numero == 1 || numero == 2){
+                System.out.println("Captura realizada con éxito");
+                calcularMayorId(con);
+                insertarPokemon(con);
+                
+               
+            }else{
+                System.out.println("Has fallado");
+            }
+
+        }    
+
+
 
         //Introducir método aprender ataque 
 }
