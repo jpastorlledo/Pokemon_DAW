@@ -5,8 +5,6 @@ import java.sql.Connection;
 import java.io.IOException;
 import java.sql.*;
 
-
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
