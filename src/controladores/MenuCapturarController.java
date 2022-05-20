@@ -25,6 +25,8 @@ public class MenuCapturarController implements Initializable{
 
     @FXML 
     private Button btnCapturar;
+
+	Pokemon p = new Pokemon();
    
 
     @FXML
@@ -74,7 +76,7 @@ public class MenuCapturarController implements Initializable{
 
 		    System.out.println("Conexión establecida");
             
-            generarPokemonBDDD(con);
+            p.generarPokemonBBDD(con);
 
             try {
 				con.close();
@@ -90,12 +92,8 @@ public class MenuCapturarController implements Initializable{
 		} 
 
     }
-
-    private void calcularMayorId(Connection con) {}
-    private void generarPokemonAleatorio(Connection con) {}
-    private void generarPokemonBDDD(Connection con) {}
-	
-    @Override
+ 
+	@Override
     public void initialize(URL location, ResourceBundle resources) {
     
     }
