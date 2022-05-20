@@ -322,7 +322,7 @@ public class Pokemon {
          */
         public void generarPokemonBBDD(Connection con) throws SQLException {
             Random random = new Random();
-            int numeroRandom= (random.nextInt(34) + 1);		
+            int numeroRandom= (random.nextInt(22) + 1);		
             String consulta = "SELECT * FROM POKEMON WHERE NUM_POKEDEX=" +numeroRandom;
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery(consulta);
