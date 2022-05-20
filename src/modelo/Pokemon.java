@@ -386,20 +386,20 @@ public class Pokemon {
          * @throws SQLException
          */
         public void insertarPokemon(Connection con) throws SQLException {
-            String sentencia ="INSERT INTO POKEMON_ENTRENADOR(ID_POKEMON, NUM_POKEDEX, ID_ENTRENADOR, MOTE, VITALIDAD, ATAQUE, ,ARAQUE_ESP, DEFENSA, DEFENSA_ESP, ESTAMINA, VELOCIDAD, NIVEL, FERTILIDAD) VALUES("
+            String sentencia ="INSERT INTO POKEMON_ENTRENADOR(ID_POKEMON, NUM_POKEDEX, ID_ENTRENADOR, MOTE, VITALIDAD, ATAQUE, ,ATAQUE_ESP, DEFENSA, DEFENSA_ESP, ESTAMINA, VELOCIDAD, NIVEL, FERTILIDAD) VALUES("
                                                         + this.getIdPokemon()
-                                                        +", '"+this.getNumeroPokedex()
+                                                        +", "+this.getNumeroPokedex()
                                                         +", '"+this.getMote()
-                                                        +", '"+this.getVitalidad()
-                                                        +", '"+this.getAtaque()
-                                                        +", '"+this.getAtaqueEspecial()
-                                                        +", '"+this.getDefensa()
-                                                        +", '"+this.getDefensaEspecial()
-                                                        +", '"+this.getEstamina()
-                                                        +", '"+this.getVelocidad()
-                                                        +", '"+this.getNivel()
-                                                        +", '"+this.getFertilidad()
-                                                        +"')";
+                                                        +"', "+this.getVitalidad()
+                                                        +", "+this.getAtaque()
+                                                        +", "+this.getAtaqueEspecial()
+                                                        +", "+this.getDefensa()
+                                                        +", "+this.getDefensaEspecial()
+                                                        +", "+this.getEstamina()
+                                                        +", "+this.getVelocidad()
+                                                        +", "+this.getNivel()
+                                                        +", "+this.getFertilidad()
+                                                        +")";
             Statement stmt = null;
             try {
             stmt = con.createStatement();
