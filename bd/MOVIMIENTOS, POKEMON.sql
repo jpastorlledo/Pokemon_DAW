@@ -22,25 +22,8 @@ VALUES	(1, 'Bulbasaur', 'Planta', NULL),
         (19, 'Spearow', 'Volador', 'Tierra'),
         (20, 'Fearow', 'Volador', 'Tierra'),
         (21, 'Pikachu', 'Electrico', NULL),
-        (22, 'Raichu', 'Electrico', NULL),
-        (23, 'Sandshrew', 'Tierra', NULL),
-        (24, 'Sandslash', 'Tierra', NULL),
-        (25, 'Vulpix', 'Fuego', NULL),
-        (26, 'Ninetales', 'Fuego', NULL),
-        (27, 'Zubat', 'Tierra', 'Volador'),
-        (28, 'Golbat', 'Tierra', 'Volador'),
-        (29, 'Oddish', 'Planta', 'Agua'),
-        (30, 'Gloom', 'Planta', 'Agua'),
-        (31, 'Magnemite', 'Electrico', 'Agua'),
-        (32, 'Magneton', 'Electrico', 'Agua'),
-        (33, 'Shellder', 'Agua', 'Tierra'),
-        (34, 'Cloyster', 'Agua', 'Tierra'),
-        (35, 'Electrode', 'Electrico', NULL),
-        (36, 'Voltorb', 'Electrico', NULL),
-        (37, 'Exeggcute', 'Planta', NULL),
-        (38, 'Exeggutor', 'Planta', 'Agua'),
-        (39, 'Rhyhorn', 'Tierra', 'Electrico'),
-        (40, 'Seadra', 'Agua', 'Bicho');
+        (22, 'Raichu', 'Electrico', NULL);
+        
 		
 		
 		
