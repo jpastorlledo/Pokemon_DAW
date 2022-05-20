@@ -321,22 +321,24 @@ public class Pokemon {
          * @throws SQLException
          */
         public void generarPokemonBBDD(Connection con) throws SQLException {
-            int numeroRandom= (int) Math.random()*40 + 1 ;		
+            Random random = new Random();
+            int numeroRandom= (int) Math.random()*22 + 1 ;		
             String consulta = "SELECT * FROM POKEMON WHERE NUM_POKEDEX=" +numeroRandom;
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery(consulta);
 
+
             
 
             while (rs.next()) {
-                Random random = new Random();
+                
                
                 this.setNumeroPokedex(rs.getInt("NUM_POKEDEX"));
                 this.setNombre(rs.getString("NOMBRE"));
-                this.setTipo1(Tipo.valueOf(rs.getString("tipo1")));
+                this.setTipo1(Tipo.valueOf(rs.getString("TIPO1")));
 
-                if(rs.getObject("tipo2")!=null){
-                    this.setTipo2(Tipo.valueOf(rs.getString("tipo2")));
+                if(rs.getObject("TIPO2")!=null){
+                    this.setTipo2(Tipo.valueOf(rs.getString("TIPO2")));
                 }else{
                     this.setTipo2(Tipo.NULO);
                     
