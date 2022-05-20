@@ -76,9 +76,6 @@ public class MenuCapturarController implements Initializable{
             
             generarPokemonBDDD(con);
 
-            
-
-
             try {
 				con.close();
 				System.out.println("Conexión cerrada");

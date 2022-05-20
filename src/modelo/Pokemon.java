@@ -267,50 +267,38 @@ public class Pokemon {
         return NEUTRO;
     }
 
-       
-
-        public void descansar(){}
-        
-        public Pokemon generarPokemonAleatorio(Pokemon pokemon) {
-
-            Random random = new Random();
-
-            pokemon.vitalidad = 1 + random.nextInt(10);
-            pokemon.ataque = 1 + random.nextInt(10);
-            pokemon.defensa = 1 + random.nextInt(10);
-            pokemon.ataqueEspecial = 1 + random.nextInt(10);
-            pokemon.defensaEspecial = 1 + random.nextInt(10);
-            pokemon.velocidad = 1 + random.nextInt(10);
-            pokemon.nivel = 1;
-            pokemon.estamina = 30;
-            pokemon.fertlidad = 5;
-
-            return pokemon;
-
-        }
-
-        public static void generarPokemonBBDD(Connection con) throws SQLException {
+        public void generarPokemonBBDD(Connection con) throws SQLException {
             int numeroRandom= (int) Math.random()*40 + 1 ;		
             String consulta = "SELECT * FROM POKEMON WHERE NUM_POKEDEX=" +numeroRandom;
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery(consulta);
 
-    
-            Pokemon pokemon = null;
+            Random random = new Random();
+
             while (rs.next()) {
-                pokemon = new Pokemon();
-                pokemon.setNumeroPokedex(rs.getInt("NUM_POKEDEX"));
-                pokemon.setNombre(rs.getString("NOMBRE"));
-                pokemon.setTipo1(Tipo.valueOf(rs.getString("tipo1")));
+               
+                this.setNumeroPokedex(rs.getInt("NUM_POKEDEX"));
+                this.setNombre(rs.getString("NOMBRE"));
+                this.setTipo1(Tipo.valueOf(rs.getString("tipo1")));
 
                 if(rs.getObject("tipo2")==null){
-                    pokemon.setTipo2(Tipo.NULO);
+                    this.setTipo2(Tipo.NULO);
                 }else{
-                    pokemon.setTipo2(Tipo.valueOf(rs.getString("tipo2")));
-                
-                
-                System.out.println(pokemon.toString());
+                   this.setTipo2(Tipo.valueOf(rs.getString("tipo2")));
+                    
+                    System.out.println(this.toString());
                 }
+
+                this.vitalidad = 1 + random.nextInt(10);
+                this.ataque = 1 + random.nextInt(10);
+                this.defensa = 1 + random.nextInt(10);
+                this.ataqueEspecial = 1 + random.nextInt(10);
+                this.defensaEspecial = 1 + random.nextInt(10);
+                this.velocidad = 1 + random.nextInt(10);
+                this.nivel = 1;
+                this.estamina = 30;
+                this.fertlidad = 5;
+
             statement.close();
             }   
         }
@@ -362,7 +350,9 @@ public class Pokemon {
         public void probabilidadCaptura(Connection con) throws SQLException{
             int numero = 0;
 
-            numero = this.numeroAleatorio(3);
+            Random random = new Random();
+
+            numero = 1 + random.nextInt(3);
 
             if (numero == 1 || numero == 2){
                 System.out.println("Captura realizada con éxito");
