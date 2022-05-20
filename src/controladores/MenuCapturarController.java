@@ -43,7 +43,7 @@ public class MenuCapturarController implements Initializable{
 
 		    System.out.println("Conexión establecida");
             
-            probabilidadCaptura(con);
+            p.probabilidadCaptura(con);
 
             try {
 				con.close();
@@ -59,8 +59,6 @@ public class MenuCapturarController implements Initializable{
 		} 
         
     }
-
-    private void probabilidadCaptura(Connection con) {}
 
         @FXML
         private void generarPokemon(ActionEvent event)throws IOException{

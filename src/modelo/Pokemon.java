@@ -326,20 +326,20 @@ public class Pokemon {
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery(consulta);
 
-            Random random = new Random();
+            
 
             while (rs.next()) {
+                Random random = new Random();
                
                 this.setNumeroPokedex(rs.getInt("NUM_POKEDEX"));
                 this.setNombre(rs.getString("NOMBRE"));
                 this.setTipo1(Tipo.valueOf(rs.getString("tipo1")));
 
-                if(rs.getObject("tipo2")==null){
-                    this.setTipo2(Tipo.NULO);
+                if(rs.getObject("tipo2")!=null){
+                    this.setTipo2(Tipo.valueOf(rs.getString("tipo2")));
                 }else{
-                   this.setTipo2(Tipo.valueOf(rs.getString("tipo2")));
+                    this.setTipo2(Tipo.NULO);
                     
-                    System.out.println(this.toString());
                 }
 
                 this.vitalidad = 1 + random.nextInt(10);
@@ -351,6 +351,8 @@ public class Pokemon {
                 this.nivel = 1;
                 this.estamina = 30;
                 this.fertlidad = 5;
+
+                System.out.println(this.toString());
 
             statement.close();
             }   
@@ -381,7 +383,7 @@ public class Pokemon {
          * @throws SQLException
          */
         public void insertarPokemon(Connection con) throws SQLException {
-            String sentencia ="INSERT INTO POKEMON_ENTRENADOR(ID_POKEMON, NUM_POKEDEX, ID_ENTRENADOR, MOTE, VITALIDAD, ATAQUE, ,ARAQUE_ESP, DEFENSA, DEFENSA_ESP, ESTAMINA, VELOCIDAD, NIVEL, FERTILIDAD, EXPERIENCIA) VALUES("
+            String sentencia ="INSERT INTO POKEMON_ENTRENADOR(ID_POKEMON, NUM_POKEDEX, ID_ENTRENADOR, MOTE, VITALIDAD, ATAQUE, ,ARAQUE_ESP, DEFENSA, DEFENSA_ESP, ESTAMINA, VELOCIDAD, NIVEL, FERTILIDAD) VALUES("
                                                         + this.getIdPokemon()
                                                         +", '"+this.getNumeroPokedex()
                                                         +", '"+this.getMote()
@@ -394,7 +396,6 @@ public class Pokemon {
                                                         +", '"+this.getVelocidad()
                                                         +", '"+this.getNivel()
                                                         +", '"+this.getFertilidad()
-                                                        +", '"+this.getExperiencia()
                                                         +"')";
             Statement stmt = null;
             try {
