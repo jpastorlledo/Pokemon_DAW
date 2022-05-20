@@ -94,7 +94,7 @@ public class MenuCapturarController implements Initializable{
     private void calcularMayorId(Connection con) {}
     private void generarPokemonAleatorio(Connection con) {}
     private void generarPokemonBDDD(Connection con) {}
-
+	
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     

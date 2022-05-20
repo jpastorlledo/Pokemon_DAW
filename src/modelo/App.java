@@ -16,9 +16,15 @@ public class App extends Application {
 
         Combate c = new Combate();
         Turno t1= new Turno(1,
-        " Entrenador: Charmander usa balón Igneo", 
-        "Rival:Squirtle usa Púas");
+        "Charmander usa balon Igneo", 
+        "Squirtle usa Puas");
         c.addTurno(t1);
+
+        c.escribirCombate();
+
+
+        
+
         String url = "jdbc:mysql://localhost:3306/pokemon ";
 		String login = "root";
 		String password = "";
@@ -38,6 +44,7 @@ public class App extends Application {
 
             insertarPokemon(connection,poke);
             */
+            
 
 
             try {
