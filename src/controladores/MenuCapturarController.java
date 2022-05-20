@@ -82,13 +82,14 @@ public class MenuCapturarController implements Initializable{
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		 
 
 		} catch (SQLException sqle) {
 			sqle.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} 
-
+		
+		}
     }
  
 	@Override
