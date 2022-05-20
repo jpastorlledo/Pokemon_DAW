@@ -3,12 +3,12 @@ package modelo;
 public class Turno {
     
     private int numeroTurno;
-    private Movimiento accionJugador;
-    private Movimiento accionRival;
+    private String accionJugador;
+    private String accionRival;
 
     public Turno(){}
     
-    public Turno(int numeroTurno, Movimiento accionJugador, Movimiento accionRival) {
+    public Turno(int numeroTurno, String accionJugador, String accionRival) {
         this.numeroTurno = numeroTurno;
         this.accionJugador = accionJugador;
         this.accionRival = accionRival;
@@ -18,11 +18,11 @@ public class Turno {
     public int getNumeroTurno() { return this.numeroTurno; }
     public void setNumeroTurno(int numeroTurno) { this.numeroTurno = numeroTurno; }
 
-    public Movimiento getAccionJugador() { return this.accionJugador; }
-    public void setAccionJugador(Movimiento accionJugador) { this.accionJugador = accionJugador; }
+    public String getAccionJugador() { return this.accionJugador; }
+    public void setAccionJugador(String accionJugador) { this.accionJugador = accionJugador; }
 
-    public Movimiento getAccionRival() { return this.accionRival; }
-    public void setAccionRival(Movimiento accionRival) { this.accionRival = accionRival; }
+    public String getAccionRival() { return this.accionRival; }
+    public void setAccionRival(String accionRival) { this.accionRival = accionRival; }
 
 
     @Override

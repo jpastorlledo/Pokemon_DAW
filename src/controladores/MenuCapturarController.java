@@ -21,14 +21,14 @@ import javafx.stage.Stage;
 
 public class MenuCapturarController implements Initializable{
     @FXML
-    private Button btnGenPok;
+    private Button btngenerarPok;
 
     @FXML 
-    private Button btnCapturarPokemon;
+    private Button btnCapturar;
    
 
     @FXML
-    private void capturarPokemon(ActionEvent event)throws IOException{
+    private void capturar(ActionEvent event)throws IOException{
         
         Connection con;
         String url = "jdbc:mysql://localhost:3306/pokemon ";

@@ -16,6 +16,11 @@ import javafx.stage.Stage;
 public class App extends Application {
     public static void main(String[] args) {
 
+        Combate c = new Combate();
+        Turno t1= new Turno(1,
+        " Entrenador: Charmander usa balón Igneo", 
+        "Rival:Squirtle usa Púas");
+        c.addTurno(t1);
         String url = "jdbc:mysql://localhost:3306/pokemon ";
 		String login = "root";
 		String password = "";
@@ -65,10 +70,15 @@ public class App extends Application {
             
             e.printStackTrace();
         }
+
         
         
     }
+
+     
 }
+
+
 
     
 

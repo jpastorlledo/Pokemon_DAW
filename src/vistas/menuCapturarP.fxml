@@ -85,13 +85,13 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <ImageView fitHeight="374.0" fitWidth="642.0" layoutX="-1.0">
+            <ImageView fitHeight="400.0" fitWidth="666.0" layoutX="-18.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="C:\Users\Paco\Desktop\pokemonv2\Pokemon_DAW\img\imagenCapturar.pngurar.png" />
+                  <Image url="@Downloads/imagenCapturar.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnCapturarPokemon" layoutX="364.0" layoutY="312.0" mnemonicParsing="false" onAction="#capturarPokemon" text="Capturar" />
-            <Button fx:id="btnGenPok" layoutX="477.0" layoutY="312.0" mnemonicParsing="false" onAction="#generarPokemon" text="GenerarPokemon" />
+            <Button fx:id="btnCapturar" layoutX="385.0" layoutY="298.0" mnemonicParsing="false" onAction="#capturar" text="Capturar" />
+            <Button fx:id="btngenerarPok" layoutX="512.0" layoutY="298.0" mnemonicParsing="false" onAction="#generarPokemon" text="GenerarPokemon" />
          </children>
     </AnchorPane>
   </children>
