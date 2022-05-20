@@ -1,5 +1,5 @@
 package modelo;
 
 public enum Tipo {
-    AGUA, FUEGO, PLANTA, BICHO, VOLADOR, ELECTRICO, TIERRA,NULO;
+    Agua, Fuego, Planta, Bicho, Volador, Electrico, Tierra ,NULO;
 }
