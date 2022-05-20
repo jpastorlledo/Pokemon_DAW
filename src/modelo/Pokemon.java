@@ -356,8 +356,9 @@ public class Pokemon {
 
                 System.out.println(this.toString());
 
-            statement.close();
+            
             }   
+            statement.close();
         }
 
         
