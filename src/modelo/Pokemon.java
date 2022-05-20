@@ -9,7 +9,21 @@ import java.sql.SQLException;
 import java.sql.*;
 import javax.sql.*;
 
+/**
+ * Clase pokemon, usada para crear diferentes pokemon.
+ * @author JOSE MANUEL PASTOR LLEDO
+ * @author FRANCISCO MATEOS MARTINEZ
+ * 
+ */
 public class Pokemon {
+
+    /**
+     * Esta compuesta por diferentes atributos como el ID de pokemon, el numero de la pokedex,
+     * el nombre, el mote, la vitalidad, el ataque, la defensa, el ataque especial,
+     * la defensa especial, la velocidad, la estamina, el nivel, la fertilidad,
+     * el primer y segundo tipo, la expereincia y los movimientos
+     * 
+     */
     private int idPokemon;
     private int numeroPokedex;
     private String nombre;
@@ -30,6 +44,10 @@ public class Pokemon {
     Movimiento []movimientosPosibles;
     Movimiento []movimientosDisponibles;
     
+    /**
+     * Constructor vacio de la clase Pokemon.
+     */
+    
     public Pokemon() {
         this.vitalidad = numeroAleatorio(10);
         this.ataque = numeroAleatorio(10);
@@ -43,6 +61,17 @@ public class Pokemon {
         this.fertlidad = 5;
     }
 
+    /**
+     * Constructor parametrizado de la clase Pokemon.
+     * @param idPokemon Identificador del Pokemon.
+     * @param nombre Nombre del Pokemon.
+     * @param mote Mote del Pokemon.
+     * @param nivel Nivel del Pokemon.
+     * @param tipo1 Primer tipo del Pokemon.
+     * @param tipo2 Segundo del tipo del Pokemon.
+     * @param estado Estado en el que se encuentra el pokemon.
+     * @param estamina Estamina del pokemon.
+     */
     public Pokemon(int idPokemon, String nombre, String mote, int nivel, Tipo tipo1, Tipo tipo2, Estado estado, double estamina) {
         this();
         this.idPokemon = idPokemon;
@@ -136,15 +165,28 @@ public class Pokemon {
             ", movimientos posibles= " + getMovimientosPosibles();
     }
 
+    /**
+     * Metodo para generar un numero aleatorio.
+     * @param num Numero para multiplicar con el metodo random.
+     * @return Devuelve un numero aleatorio entre 1 y el numero al que equivale el parametro.
+     */
+    
     private int numeroAleatorio(int num) {
         return (int) (Math.random() * num) + 1;
     }
 
+    /**
+     * Declaracion de metodo para aprender ataques.
+     */
     private void aprenderAtaque() {
         if (nivel % 3 == 0) {
             // Por hacer
         }
     }
+
+    /**
+     * Metodo para subir de nivel un pokemon.
+     */
 
     public void subirNivel() {
       
@@ -165,7 +207,13 @@ public class Pokemon {
     
         //Incluir método atacar.
 
-    public String comprobarVentajaDesventaja(Pokemon pokemonRival, double nuevaPotencia){
+        /**
+         * Metodo para comprobar si un pokemon tiene ventaja o desventaja con respecto al pokemon rival.
+         * @param pokemonRival Pokemon al que nos enfrentamos.
+         * @return Devuelve un  mensaja si el pokemon tiene ventaja, desventaja o neutro.
+         */
+
+    public String comprobarVentajaDesventaja(Pokemon pokemonRival){
         final String VENTAJA = "VENTAJA";
         final String DESVENTAJA = "DESVENTAJA";
         final String NEUTRO = "NEUTRO";
@@ -267,6 +315,11 @@ public class Pokemon {
         return NEUTRO;
     }
 
+        /**
+         * Metodo para generar un pokemon aleatorio de la base de datos.
+         * @param con
+         * @throws SQLException
+         */
         public void generarPokemonBBDD(Connection con) throws SQLException {
             int numeroRandom= (int) Math.random()*40 + 1 ;		
             String consulta = "SELECT * FROM POKEMON WHERE NUM_POKEDEX=" +numeroRandom;
@@ -303,6 +356,12 @@ public class Pokemon {
             }   
         }
 
+        
+        /**
+         * Metodo para calcular el mayor Identificador de la base de datos y aumentarlo en 1.
+         * @param con
+         * @throws SQLException
+         */
         public void calcularMayorId(Connection con) throws SQLException {		
             String consulta = "SELECT MAX(ID_POKEMON) FROM POKEMON_ENTRENADOR"; 
             
@@ -316,7 +375,11 @@ public class Pokemon {
                 statement.close();
             }
 
-
+        /**
+         * Metodo para insertar un pokemon en la base de datos al ser capturado.
+         * @param con
+         * @throws SQLException
+         */
         public void insertarPokemon(Connection con) throws SQLException {
             String sentencia ="INSERT INTO POKEMON_ENTRENADOR(ID_POKEMON, NUM_POKEDEX, ID_ENTRENADOR, MOTE, VITALIDAD, ATAQUE, ,ARAQUE_ESP, DEFENSA, DEFENSA_ESP, ESTAMINA, VELOCIDAD, NIVEL, FERTILIDAD, EXPERIENCIA) VALUES("
                                                         + this.getIdPokemon()
@@ -347,6 +410,11 @@ public class Pokemon {
                                                            
         }
 
+        /**
+         * Metodo para calcular la probabilidad de exito en la captura.
+         * @param con
+         * @throws SQLException
+         */
         public void probabilidadCaptura(Connection con) throws SQLException{
             int numero = 0;
 
