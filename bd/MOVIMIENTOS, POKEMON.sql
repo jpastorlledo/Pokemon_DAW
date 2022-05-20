@@ -22,8 +22,48 @@ VALUES	(1, 'Bulbasaur', 'Planta', NULL),
         (19, 'Spearow', 'Volador', 'Tierra'),
         (20, 'Fearow', 'Volador', 'Tierra'),
         (21, 'Pikachu', 'Electrico', NULL),
-        (22, 'Raichu', 'Electrico', NULL);
-        
+        (22, 'Raichu', 'Electrico', NULL),
+        (23, 'Sandshrew', 'Tierra', NULL),
+        (24, 'Sandslash', 'Tierra', NULL),
+        (25, 'Vulpix', 'Fuego', NULL),
+        (26, 'Ninetales', 'Fuego', NULL),
+        (27, 'Zubat', 'Tierra', 'Volador'),
+        (28, 'Golbat', 'Tierra', 'Volador'),
+        (29, 'Oddish', 'Planta', 'Agua'),
+        (30, 'Gloom', 'Planta', 'Agua'),
+        (31, 'Magnemite', 'Electrico', 'Agua'),
+        (32, 'Magneton', 'Electrico', 'Agua'),
+        (33, 'Shellder', 'Agua', 'Tierra'),
+        (34, 'Cloyster', 'Agua', 'Tierra'),
+        (35, 'Electrode', 'Electrico', NULL),
+        (36, 'Voltorb', 'Electrico', NULL),
+        (37, 'Exeggcute', 'Planta', NULL),
+        (38, 'Exeggutor', 'Planta', 'Agua'),
+        (39, 'Rhyhorn', 'Tierra', 'Electrico'),
+        (40, 'Seadra', 'Agua', 'Bicho');
+		
+UPDATE pokemon SET IMAGEN = 'C:\Users\Paco\Desktop\imgPokemon' WHERE NOMBRE = 'Bulbasaur';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/blastoise' WHERE NOMBRE = 'Blastoise';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/butterfree' WHERE NOMBRE = 'Butterfree';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/caterpie' WHERE NOMBRE = 'Caterpie';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/charizard' WHERE NOMBRE = 'Charizard';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/charmander' WHERE NOMBRE = 'Charmander';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/charmeleon' WHERE NOMBRE = 'Charmeleon';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/fearow' WHERE NOMBRE = 'Fearow';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/kakuna' WHERE NOMBRE = 'Kakuna';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/metapod' WHERE NOMBRE = 'Metapod';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/pidgeot' WHERE NOMBRE = 'Pidgeot';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/pidgeotto' WHERE NOMBRE = 'Pidgeotto';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/Pidgey' WHERE NOMBRE = 'Pidgey';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/pikachu' WHERE NOMBRE = 'Pikachu';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/raichu' WHERE NOMBRE = 'Raichu';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/spearow' WHERE NOMBRE = 'Spearow';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/squirtle' WHERE NOMBRE = 'Squirtle';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/venusaur' WHERE NOMBRE = 'Venusaur';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/wartortle' WHERE NOMBRE = 'Wartortle';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/weedle' WHERE NOMBRE = 'Weedle';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/beedrill' WHERE NOMBRE = 'Beedrill';
+UPDATE pokemon SET IMAGEN = 'imgPokemon/ivysaur' WHERE NOMBRE = 'Ivysaur';
 		
 		
 		
@@ -79,3 +119,8 @@ VALUES	(1, 'Álvaro'),
         (8, 'Damian'),
         (9, 'Diego'),
         (10, 'Dani');
+		
+		
+		
+		
+		
